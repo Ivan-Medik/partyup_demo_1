@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/search.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Spectral:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <title>{% block title %}Search{% endblock %}</title>
+    </head>
+    <body>
+
+    <header class="header">
+        <div class="container">
+            <p class="header-top">Sort by</p>
+
+            <div class="header-main">
+                <div class="header-time">
+                    <div class="header-time-top">
+                        <p name="selection-name">Upload date</p>
+                        <img src="{% static 'img/bottom-arr.svg' %}" alt="more" class="header-time-top-img">
+                    </div>
+                    <div select="menu-selector" class="header-time-bottom">
+                        <a class="header-time-bottom-item menu-selector-active">Upload date</a>
+                        <a class="header-time-bottom-item" id="header-time-popular">Most popular</a>
+                        <a class="header-time-bottom-item" id="header-time-newest">Newest</a>
+                        <a class="header-time-bottom-item" id="header-time-oldest">Oldest</a>
+                    </div>
+                </div>
+                <div class="header-bpm">
+                    <p class="header-bpm-title">BPM</p>
+                    <div class="header-bpm-content">
+                        <input type="text" class="header-bpm-input" id="bpm-min" placeholder="0">
+                        <p class="header-bpm-to">to</p>
+                        <input type="text" class="header-bpm-input" id="bpm-max" placeholder="250">
+                    </div>
+                </div>
+                <div class="header-genre">
+                    <div class="header-genre-top">
+                        <p>Select category</p>
+                        <img src="{% static 'img/bottom-arr.svg' %}" alt="more" class="header-genre-top-img">
+                    </div>
+                </div>
+                <div class="header-version">
+                    <div class="header-version-top">
+                        <p>Select category</p>
+                        <img src="{% static 'img/bottom-arr.svg' %}" alt="more" class="header-version-top-img">
+                    </div>
+                </div>
+                <div class="header-btn">
+                    <div class="header-btn-content">
+                        <a href="#" class="header-btn-left">Submit</a>
+                        <a href="#" class="header-btn-right">Reset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="main-container">
+            <h2 class="main-header">Search results for "<p class="main-search-song">Avichi</p>"</h2>
+            
+            <div class="main-content">
+            
+                <a class="main-item" href="#" likes="4">
+                    <div class="main-item-top">
+                        <div class="main-item-logo">
+                            <img src="{% static 'img/play-button.svg' %}" alt="play">
+                        </div>
+                        <div class="main-item-content">
+                            <div class="main-item-content-title">1-st Song<div class="main-item-content-title-exclusive">Exclusive</div></div>
+                            <p class="main-item-content-author">Jackie & Helen</p>
+                            <div class="main-item-content-versions">
+                                <div class="main-item-content-versions-item">Clean</div>
+                                <div class="main-item-content-versions-item">Clean extendet</div>
+                                <div class="main-item-content-versions-item">Lirycs</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-item-bottom">
+                        <p class="main-item-genre">Proggressiev House</p>
+                        <p class="main-item-date">2021.09.30</p>
+                        <p class="main-item-bpm">132</p>
+                        <p class="main-item-mel">12A</p>
+                        
+                        <div class="main-item-more">
+                            <img src="{% static 'img/menu-dots.svg' %}" alt="">
+                        </div>
+                    </div>
+                    
+                </a>
+
+                <div class="main-item" likes="3252">
+                    <div class="main-item-top">
+                        <div class="main-item-logo">
+                            <img src="{% static 'img/play-button.svg' %}" alt="play">
+                        </div>
+                        <div class="main-item-content">
+                            <div class="main-item-content-title">2-st Song<div class="main-item-content-title-exclusive">Exclusive</div></div>
+                            <p class="main-item-content-author">Jackie & Helen</p>
+                            <div class="main-item-content-versions">
+                                <div class="main-item-content-versions-item">Clean</div>
+                                <div class="main-item-content-versions-item">Clean extendet</div>
+                                <div class="main-item-content-versions-item">Lirycs</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-item-bottom">
+                        <p class="main-item-genre">Proggressiev House</p>
+                        <p class="main-item-date">2020.03.30</p>
+                        <p class="main-item-bpm">243</p>
+                        <p class="main-item-mel">12A</p>
+                        
+                        <div class="main-item-more">
+                            <img src="{% static 'img/menu-dots.svg' %}" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="main-item" likes="2">
+                    <div class="main-item-top">
+                        <div class="main-item-logo">
+                            <img src="{% static 'img/play-button.svg' %}" alt="play">
+                        </div>
+                        <div class="main-item-content">
+                            <div class="main-item-content-title">3-st Song</div>
+                            <p class="main-item-content-author">Jackie & Helen</p>
+                            <div class="main-item-content-versions">
+                                <div class="main-item-content-versions-item">Clean</div>
+                                <div class="main-item-content-versions-item">Clean extendet</div>
+                                <div class="main-item-content-versions-item">Lirycs</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-item-bottom">
+                        <p class="main-item-genre">Proggressiev House</p>
+                        <p class="main-item-date">2022.12.30</p>
+                        <p class="main-item-bpm">86</p>
+                        <p class="main-item-mel">12A</p>
+                        
+                        <div class="main-item-more">
+                            <img src="{% static 'img/menu-dots.svg' %}" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="main-item" likes="3">
+                    <div class="main-item-top">
+                        <div class="main-item-logo">
+                            <img src="{% static 'img/play-button.svg' %}" alt="play">
+                        </div>
+                        <div class="main-item-content">
+                            <div class="main-item-content-title">4-st Song<div class="main-item-content-title-exclusive">Exclusive</div></div>
+                            <p class="main-item-content-author">Jackie & Helen</p>
+                            <div class="main-item-content-versions">
+                                <div class="main-item-content-versions-item">Clean</div>
+                                <div class="main-item-content-versions-item">Clean extendet</div>
+                                <div class="main-item-content-versions-item">Lirycs</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-item-bottom">
+                        <p class="main-item-genre">Proggressiev House</p>
+                        <p class="main-item-date">2013.09.22</p>
+                        <p class="main-item-bpm">109</p>
+                        <p class="main-item-mel">12A</p>
+                        
+                        <div class="main-item-more">
+                            <img src="{% static 'img/menu-dots.svg' %}" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="{% static 'js/search.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'music/home.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+	<div class='authorization'>
+		<p class="authorization-information">Авторизация</p>
+		<form action="." method="post" class="authorization-form">
+			<input type="text" name="username" autocomplete="username" maxlength="150" id="id_username" value="{{ first_name }}">
+			<input type="password" name="password" autocomplete="current-password" required="" id="id_password" value="{{ uid }}">
+			{% csrf_token %}
+			<button type="submit">Войти</button>
+		</form>
+	</div>
+
+{% endblock %}

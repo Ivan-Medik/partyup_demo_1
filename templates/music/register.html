@@ -1,0 +1,21 @@
+{% extends 'music/home.html' %}
+{% load static %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+	<p class="tine"></p>
+	<div class="register">
+		<p class="register-information">Подтверждение авторизации</p>
+		<form action="." method="post" class="register-form">
+			<input type="text" name="username" maxlength="150" required="" id="id_username" value="{{ first_name }}">
+			<input type="text" name="first_name" maxlength="150" id="id_first_name" value="{{ last_name }}">
+			<input type="password" name="password" required="" id="id_password" value="{{ uid }}">
+			<input type="password" name="password2" required="" id="id_password2" value="{{ uid }}">
+			{% csrf_token %}
+			<button type="submit" class="">Подтвердить</button>
+		</form>
+	</div>
+
+{% endblock %}
