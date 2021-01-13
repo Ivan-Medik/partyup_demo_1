@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'music',
-    'social_django', # Для подключения авторизация с других сайтов
+    #'social_django', # Для подключения авторизация с других сайтов
 ]
 
 AUTHENTICATION_BACKENDS = [
